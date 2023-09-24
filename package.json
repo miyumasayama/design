@@ -19,13 +19,14 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://miyumasayama.github.io/design",
   "scripts": {
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build": "cross-env PUBLIC_URL=/design react-scripts build",
-    "deploy": "npm run build && gh-pages -d build",
-    "postbuild": "cp build/index.html build/404.html"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +47,7 @@
     ]
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "gh-pages": "^6.0.0"
   }
 }
