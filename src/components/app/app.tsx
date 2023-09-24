@@ -6,8 +6,8 @@ export const App: FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<></>} />
-        <Route path='/anne' element={<Anne />} />
+        <Route path={`${process.env.PUBLIC_URL}/`} element={<></>} />
+        <Route path={`${process.env.PUBLIC_URL}/`} element={<Anne />} />
       </Routes>
     </Router>
   );
